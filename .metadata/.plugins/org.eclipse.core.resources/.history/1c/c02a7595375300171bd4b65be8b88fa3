@@ -1,0 +1,10 @@
+package com.sample;
+
+public class ThisSuper {
+public ThisSuper(int a){
+  this(a);
+}
+public void b(){
+	
+}
+}

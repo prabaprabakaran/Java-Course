@@ -1,0 +1,23 @@
+package geeksForGeeks;
+
+import java.util.Scanner;
+
+public class StringArrange {
+public static void main(String[] args) {
+Scanner s=new Scanner(System.in);
+String sb=s.nextLine();
+char ch[]=sb.replaceAll("[^0-9+]","").toCharArray();
+char ch1[]=sb.replaceAll("[0-9+]","").toCharArray();
+int number=0;
+for(int i=0;i<ch.length;i++){
+	number+=ch[i]-48;
+}
+for(int i=0;i<ch1.length;i++){
+	for(int j=1;j<ch1.length;j++){
+		if(String.valueOf(ch[i]).compareTo(String.valueOf(ch[j]){
+			
+		}
+	}
+}
+}
+}

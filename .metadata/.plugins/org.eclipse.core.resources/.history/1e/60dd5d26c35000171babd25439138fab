@@ -1,0 +1,23 @@
+package com.util.connection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+public class DbConnection {
+	public static Connection jdbc() throws SQLException, ClassNotFoundException{
+		Connection con=null;  
+	    try{  
+	        Class.forName("com.mysql.jdbc.Driver");  
+	        con=DriverManager.getConnection("jdbc:mysql://localhost:8080","system","mathi");  
+	    }catch(Exception e){System.out.println(e);}  
+	    return con;  
+	}  
+		
+		
+		
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+			
+		jdbc();
+			}}

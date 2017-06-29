@@ -1,0 +1,17 @@
+package geeksForGeeks;
+
+import java.util.Scanner;
+
+public class FactOperation {
+public static void main(String[] args) {
+	Scanner s=new Scanner(System.in);
+	int a=s.nextInt();
+	int b[]=new int[a];
+	for(int i=0;i<b.length;i++){
+		b[i]=s.nextInt();
+	}
+	System.out.println(b[0]);
+
+	
+}
+}

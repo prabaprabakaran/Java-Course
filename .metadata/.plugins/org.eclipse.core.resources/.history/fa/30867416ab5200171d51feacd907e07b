@@ -1,0 +1,9 @@
+package com.sample;
+
+public class mains {
+public static void main(String[] args) {
+String s="praba";
+String b=s.toString();
+System.out.println(b);
+}
+}

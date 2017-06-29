@@ -1,0 +1,27 @@
+package com.sample;
+
+ abstract class Cons {
+	
+	int a;
+	String b;
+Cons(){
+	System.out.println("hello");
+}
+Cons(int a,String b){
+	this.a=a;
+	this.b=b;
+	System.out.println("arg"+ a+" "+b);
+}
+public static void main(String args) {
+abs ab=new abs();
+
+}
+}
+public class abs extends abs{
+abs(){
+
+}
+public static void main(String[] args) {
+	main("abc");
+}
+}

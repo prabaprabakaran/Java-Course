@@ -1,0 +1,90 @@
+package Day14;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Arrays;
+
+public class jdbcConnection {
+public void jdbc(){
+	Connection con=null;
+	Statement sta=null;
+	try {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","system");
+	
+		sta=con.createStatement();
+		String str="CREATE TABLE STUDENT1"+"(id INTEGER , "+" NAME VARCHAR(25),"+" age INTEGER)";
+		sta.executeQuery(str);
+		//String str1="insert into student values(\"1\",\"praba\",\"20\")";
+		//sta.addBatch(str1);
+		//int i[]=sta.executeBatch();
+		//System.out.println(Arrays.toString(i));
+       
+		
+	} catch (Exception e) {
+		
+		e.printStackTrace();
+	}
+	finally{
+		
+			try {
+				if(con!=null){
+				con.close();
+				if(sta!=null){
+					sta.close();
+				}
+			} }
+			catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}}
+public static void main(String[] args) {
+	jdbcConnection jd=new jdbcConnection();
+	//jd.jdbc();
+	jd.insert();
+}
+@SuppressWarnings("null")
+public void insert(){
+	Connection con=null;
+Statement sta=null;
+	
+	try {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","system");
+		sta= con.createStatement();
+	String sql1= "INSERT INTO student1(ID,NAME,AGE)VALUES (12,'Mathi',22)";
+	sta.addBatch(sql1);
+String sql2="ALTER TABLE student1 ADD datee date";
+String sql3="update table student1 id=13";
+sta.addBatch(sql3);
+sta.addBatch(sql2);
+int i[]=sta.executeBatch();
+System.out.println(Arrays.toString(i));
+	sta.executeUpdate(sql1);
+	
+	
+	
+	} catch (Exception e) {
+		
+		e.printStackTrace();
+	}
+	finally{
+		
+			try {
+				if(con!=null){
+				con.close();
+				if(sta!=null){
+					sta.close();
+				}
+				
+			} }
+			catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}}	
+}
+

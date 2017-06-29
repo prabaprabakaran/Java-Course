@@ -1,0 +1,12 @@
+package exercise;
+
+interface Inter {
+int a=19;
+
+}
+public class B extends Inter{
+	public static void main(String[] args) {
+		Inter in=new B();
+		
+	}
+}

@@ -1,0 +1,10 @@
+package com.sample;
+
+public class checNull {
+public static void main(String[] args) {
+	String a="d";
+	if(a.length()>0){
+	System.out.println("yes");
+}
+}
+}

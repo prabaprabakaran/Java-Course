@@ -1,0 +1,11 @@
+
+
+	public class bike{
+		public bike(){
+			System.out.println("empty cons");
+		}
+		public bike(int i){
+			
+			System.out.println("one arg");
+		}
+	}

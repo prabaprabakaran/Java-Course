@@ -1,0 +1,14 @@
+package com.util.bean;
+
+public class userDetails {
+int user_id;
+String user_Name;
+String user_email;
+String user_address;
+String user_password;
+String user_confirmPwd;
+String user_Newsletter;
+String user_sex;
+
+
+}

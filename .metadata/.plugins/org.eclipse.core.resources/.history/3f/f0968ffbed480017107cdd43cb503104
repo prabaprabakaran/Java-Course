@@ -1,0 +1,12 @@
+package com.sample;
+
+public class inherit {
+private void num(){
+	System.out.println("parent method");
+}
+class um extends inherit{
+	public void num(){
+		System.out.println("subclass");
+	}
+}
+}

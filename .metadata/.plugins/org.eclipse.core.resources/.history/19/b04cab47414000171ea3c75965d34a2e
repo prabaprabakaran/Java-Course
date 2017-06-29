@@ -1,0 +1,11 @@
+package Day14;
+
+public class jdbcConnection {
+public void jdbc(){
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	
+}
+public static void main(String[] args) {
+	
+}
+}

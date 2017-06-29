@@ -1,0 +1,43 @@
+package com.util.DAO;
+
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.text.DateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+
+import com.util.bean.*;
+import com.util.connection.*;
+import com.util.connection.DbConnection;
+
+import sun.nio.cs.ext.Big5_HKSCS_2001;
+public class BussinessLogic {
+public List<user> getList() throws SQLException{
+	List<student1>st=new ArrayList<student1>();
+	
+	Statement sta=DbConnection.jdbc().createStatement();
+	String alt="alter table student add  stu_date Date";
+    sta.executeUpdate(alt);
+
+	
+
+	if(sta!=null){
+		sta.close();
+	}
+	
+if(DbConnection.jdbc()!=null){
+	DbConnection.jdbc().close();
+}
+	
+	return st;
+	
+}
+public static void main(String[] args) throws SQLException {
+	BussinessLogic bl=new BussinessLogic();
+	System.out.println(bl.getList());
+	
+}
+}

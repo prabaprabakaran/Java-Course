@@ -1,0 +1,9 @@
+package exercise;
+
+interface Inter {
+int a=19;
+
+}
+public class B{
+	
+}

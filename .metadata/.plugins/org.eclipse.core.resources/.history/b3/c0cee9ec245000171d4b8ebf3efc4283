@@ -1,0 +1,10 @@
+package com.util.servlet;
+
+import javax.servlet.http.HttpServlet;
+
+import com.util.bean.student1;
+
+public class secondServlet  extends HttpServlet{
+student1 st=new student1();
+
+}

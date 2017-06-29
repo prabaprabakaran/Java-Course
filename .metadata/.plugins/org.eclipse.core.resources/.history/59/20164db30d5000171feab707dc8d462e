@@ -1,0 +1,83 @@
+package com.util.DAO;
+
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.text.DateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+
+import com.util.bean.*;
+import com.util.connection.*;
+import com.util.connection.DbConnection;
+
+import sun.nio.cs.ext.Big5_HKSCS_2001;
+public class BussinessLogic {
+	public static void insert() throws SQLException{
+		Connection con=null;
+		PreparedStatement ps=null;
+		ResultSet rs=null;
+		Statement sta=DbConnection.jdbc().createStatement();
+		String str="insert into student values(?,?,?)";
+	     ps=con.prepareStatement(str);
+	     ps.setInt(1,12);
+	     ps.setString(2,"praba");
+	     ps.setInt(3,4000);
+	     rs=ps.executeQuery();
+	     
+	   
+				try {
+					if(con!=null){
+					con.close();
+					}
+					if(rs!=null){
+						rs.close();
+						
+					}
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		
+			  
+		
+	
+public List<student1> getList() throws SQLException{
+	List<student1>st=new ArrayList<student1>();
+	
+	Statement sta=DbConnection.jdbc().createStatement();
+	String view="select * from student";
+    
+    ResultSet re=sta.executeQuery(view);
+    while(re.next()){
+    	student1 stu=new student1();
+    	stu.setStu_id(re.getInt("stu_id"));
+    	stu.setStu_name(re.getString("stu_name"));
+    	stu.setSal(re.getInt("stu_sal"));
+    	 st.add(stu);
+    }
+   
+	if(sta!=null){
+		sta.close();
+	}
+	
+if(DbConnection.jdbc()!=null){
+	DbConnection.jdbc().close();
+}
+	
+	return st;
+	
+}
+
+public static void main(String[] args) throws SQLException {
+	BussinessLogic bl=new BussinessLogic();
+	System.out.println(bl.getList());
+	
+}
+}

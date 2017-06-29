@@ -1,0 +1,13 @@
+
+public class statics {
+	static int i=100;
+	public static void main(String[] args) {
+		statics staticss=new statics();
+		int a=200;
+		staticss.i=a;
+		System.out.println(a);
+		System.out.println(i);
+		
+	}
+
+}

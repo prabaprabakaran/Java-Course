@@ -1,0 +1,20 @@
+package Day14;
+
+import java.sql.Connection;
+
+public class preparedStatement {
+	public void prepared(){
+		Connection con=null;
+		preparedStatement ps=null;
+		try {
+			Class.forName("jdbc.oracle.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+public static void main(String[] args) {
+	
+}
+}

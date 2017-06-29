@@ -1,0 +1,13 @@
+
+
+public class logicals {
+public static void main(String[] args) {
+	
+
+	 String reverse = "";
+	 Scanner scan = new Scanner(System.in);
+     String s = scan.nextLine();
+     // Write your code here.
+     scan.close();
+}
+}

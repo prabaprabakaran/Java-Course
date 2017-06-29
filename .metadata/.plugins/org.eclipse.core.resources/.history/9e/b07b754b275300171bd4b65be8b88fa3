@@ -1,0 +1,6 @@
+package com.sample;
+
+public interface inter {
+    public default void in() {
+	}
+}

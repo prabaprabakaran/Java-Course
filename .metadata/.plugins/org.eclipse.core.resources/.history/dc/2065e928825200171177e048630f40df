@@ -1,0 +1,54 @@
+package com.util.servlet;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.util.DAO.BussinessLogic;
+import com.util.bean.student1;
+
+import sun.misc.RequestProcessor;
+@WebServlet("/update")
+public class UpdateServlet extends HttpServlet {
+@Override
+public void init() throws ServletException {
+	// TODO Auto-generated method stub
+	super.init();
+}
+@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	student1 stu=new student1();
+int stu_id=Integer.parseInt(req.getParameter("stu_id"));
+    
+	
+	try{
+	      List<student1> li=BussinessLogic.updateDatabase(stu_id);
+	      req.setAttribute("list",li);
+		RequestDispatcher re=req.getRequestDispatcher("/update.jsp");
+		re.forward(req,resp);
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+	System.out.println("Delete servlet ...");
+	
+	}
+@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	student1 stu=new student1();
+	BussinessLogic bc=new BussinessLogic();
+	List<student1>li=new ArrayList<>();
+	String stu_id=req.getParameter("stu_id")
+	stu.setStu_id(Integer.parseInt(req.getParameter("stu_id")));
+	stu.setStu_name(req.getParameter("stu_name"));
+	stu.setSal(Integer.parseInt(req.getParameter("sal")));
+	li.add(stu);
+	BussinessLogic.updateDatabase(Integer.parseInt(req.getParameter("stu_id")));
+	}
+}

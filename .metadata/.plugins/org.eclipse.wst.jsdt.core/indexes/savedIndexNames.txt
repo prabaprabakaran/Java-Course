@@ -1,0 +1,23 @@
+INDEX VERSION 1.3+E:\trianing\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1243057733.index
+2701284951.index
+837666887.index
+2921315682.index
+3850984243.index
+1297013223.index
+1232652526.index
+1782634165.index
+3553421649.index
+2974776448.index
+329766781.index
+3677915007.index
+1046907967.index
+2385467300.index
+2725244818.index
+1055863548.index
+3720965931.index
+845362538.index
+918193464.index
+1676758819.index
+47590907.index
+297493360.index

@@ -1,0 +1,19 @@
+package com.util.DAO;
+
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import com.util.bean.*;
+import com.util.connection.*;
+import com.util.connection.DbConnection;
+public class BussinessLogic {
+public List<student1> getList() throws SQLException{
+	List<student1>st=new ArrayList();
+	student1 stuObj=new student1();
+	Statement sta=DbConnection.jdbc().createStatement();
+	String sql="select * from student1";
+	return null;
+	
+}
+}

@@ -1,0 +1,8 @@
+package com.sample;
+
+public class mains {
+public static void main(String[] args) {
+mains ma=new mains();
+System.out.println(ma);
+}
+}

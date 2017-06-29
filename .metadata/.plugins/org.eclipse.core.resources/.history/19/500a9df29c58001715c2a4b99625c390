@@ -1,0 +1,10 @@
+package com.sample;
+
+public class checNull {
+public static void main(String[] args) {
+	String a="";
+	if(a==null){
+	System.out.println("yes");
+}
+}
+}

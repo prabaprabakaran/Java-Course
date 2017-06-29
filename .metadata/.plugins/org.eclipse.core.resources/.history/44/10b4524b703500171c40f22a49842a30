@@ -1,0 +1,13 @@
+public class buzzers extends bike{
+		public buzzers(){
+			System.out.println("empty cons");
+		}
+		public buzzers(int i){
+			System.out.println("one arg");
+		}
+	
+public static void main(String[] args) {
+	buzzers s=new buzzers();
+	
+}
+}

@@ -1,0 +1,32 @@
+package geeksForGeeks;
+
+import java.util.Scanner;
+
+public class StringArrange {
+public static void main(String[] args) {
+Scanner s=new Scanner(System.in);
+String sb=s.nextLine();
+char temp;
+char ch[]=sb.replaceAll("[^0-9+]","").toCharArray();
+char ch1[]=sb.replaceAll("[0-9+]","").toCharArray();
+String ch2=new String(ch1);
+String ch3=new String(ch2);
+int number=0;
+for(int i=0;i<ch.length;i++){
+	number+=ch[i]-48;
+}
+for(int i=0;i<ch1.length-1;i++){
+	for(int j=0;j<ch1.length-1-i;j++){
+		if((int)ch1[i]>(int)ch1[j]){
+			temp=ch1[i];
+			ch1[i]=ch1[j];
+			ch1[j]=temp;
+			
+		}
+	}
+}
+for(int i=0;i<ch1.length;i++){
+	System.out.println(ch1[i]);
+}
+}
+}

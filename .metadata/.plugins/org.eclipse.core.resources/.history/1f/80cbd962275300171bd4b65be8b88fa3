@@ -1,0 +1,5 @@
+package com.sample;
+
+public  abstract class inter {
+   public final void disp();
+}

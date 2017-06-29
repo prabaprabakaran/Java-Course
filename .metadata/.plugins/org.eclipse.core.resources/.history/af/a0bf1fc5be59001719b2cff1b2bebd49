@@ -1,0 +1,34 @@
+package geeksForGeeks;
+
+import java.util.Scanner;
+import com.sample.mains;
+public class stringSub {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	String str=sc.nextLine();
+	String str1 = str.replaceAll("[^0-9]+","");
+	int oper=Integer.parseInt(str1);
+	int arr[]=new int[oper];
+	int number=0;
+	char[] chars = ("" + oper).toCharArray();
+	System.out.println(chars[0]);
+for(int i=0;i<chars.length;i++){
+	number+=chars[i];
+}
+	System.out.println(number);
+
+	//System.out.println(add);
+    for(char ch1='a';ch1<='z';ch1++){
+    	for(char ch2='A';ch2<='Z';ch2++){
+    		
+    	}
+    }
+{
+		
+}
+	
+	}	
+	
+
+
+}

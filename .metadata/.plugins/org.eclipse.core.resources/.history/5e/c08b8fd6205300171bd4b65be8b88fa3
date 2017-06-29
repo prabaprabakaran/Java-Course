@@ -1,0 +1,29 @@
+package com.sample;
+
+
+	class name{
+public void num(){
+	System.out.println("parent method");
+}
+	}
+class um extends name{
+	public void numer(){
+		System.out.println("subclass");
+	}
+	
+}
+
+public class inherit {
+	public static void main(String[] args) {
+		um e=new um();
+		e.num();
+		int a=10;
+		int b=0;
+		String cleanInst = null;
+		cleanInst = cleanInst.replace("//", "/");
+		System.out.println(b=a++);
+	}
+	
+}
+
+

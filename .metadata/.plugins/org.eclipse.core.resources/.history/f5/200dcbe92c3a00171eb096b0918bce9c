@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class logicals {
+public static void main(String[] args) {
+	
+
+	 String reverse = "";
+	 Scanner scan = new Scanner(System.in);
+     String s = scan.nextLine();
+     String[] a=s.split(",");
+     System.out.println(a);
+     scan.close();
+}
+}

@@ -1,0 +1,153 @@
+package com.util.DAO;
+
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import java.text.ParseException;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+
+import com.util.bean.*;
+import com.util.conn.*;
+
+
+public class BussinessLogic {
+
+	/*public static void delete() throws SQLException{
+		Connection con=null;
+		PreparedStatement ps=null;
+		ResultSet rs=null;
+		con=DbConnection.jdbc();
+		Statement st=con.createStatement();
+		String str="alter table student add stu_date Date";
+		 st.executeUpdate(str);
+				try {
+					if(con!=null){
+					con.close();
+					}
+					
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}*/
+	public static int inserting(student1 stu) throws ParseException, SQLException{
+		int i=0;
+		Connection con=null;
+		 PreparedStatement ps=null;
+		try{
+			System.out.println("hello");
+         ps=DbConnection.jdbc().prepareStatement("insert into student(stu_id,stu_name,sal) values (?,?,?)");  
+          System.out.println("hi");
+          ps.setInt(1,stu.getStu_id());  
+          ps.setString(2,stu.getStu_name());  
+          ps.setInt(3,stu.getSal());  
+            
+          i=ps.executeUpdate(); 
+         if(ps!=null){
+        	 ps.close();
+         }
+		}catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
+		return i;
+		}
+			
+public List<student1> getList() throws SQLException, ClassNotFoundException{
+	List<student1>st=new ArrayList<student1>();
+	
+	Statement sta=DbConnection.jdbc().createStatement();
+	String view="select * from student";
+    System.out.println("viewww");
+    ResultSet re=sta.executeQuery(view);
+    while(re.next()){
+    	student1 stu=new student1();
+    	
+    	stu.setStu_id(re.getInt("stu_id"));
+    	stu.setStu_name(re.getString("stu_name"));
+    	stu.setSal(re.getInt("sal"));
+    	
+    	 st.add(stu);
+    	 
+    }
+   
+	if(sta!=null){
+		sta.close();
+	}
+	
+if(DbConnection.jdbc()!=null){
+	DbConnection.jdbc().close();
+}
+	
+	return st;
+	
+}
+public static int delete(student1 stu){  
+    int status=0;  
+    try{  
+        Connection con=DbConnection.jdbc();
+        PreparedStatement ps=con.prepareStatement("delete from student where stu_id=?");  
+        ps.setInt(1,stu.getStu_id());  
+        status=ps.executeUpdate();  
+          
+        con.close();  
+    }catch(Exception e){e.printStackTrace();}  
+      
+    return status;  
+}  
+public static int update(student1 stu){  
+    int status=0;  
+    
+    try{  
+    	Connection con=DbConnection.jdbc();
+        PreparedStatement ps=con.prepareStatement(  
+                     "update student set stu_name=?,sal=? where stu_id=?");  
+        ps.setInt(1,stu.getStu_id());  
+        ps.setString(2,stu.getStu_name());  
+        ps.setInt(3,stu.getSal());  
+        
+        status=ps.executeUpdate();  
+          
+        con.close();  
+    }catch(Exception ex){ex.printStackTrace();}  
+      
+    return status;  
+}  
+public static void updateDatabase(student1 stu_id){
+	ResultSet rs=null;
+	try{
+	Connection con=DbConnection.jdbc();
+    PreparedStatement ps=con.prepareStatement(  
+                "select * from student where "+stu_id+"");  
+    ps.setInt(1,stu_id.getStu_id());  
+    ps.setString(2,stu_id.getStu_name());  
+    ps.setInt(3,stu_id.getSal());  
+    rs=ps.executeQuery(); 
+    while(rs.next()){
+    	student1 stu=new student1();
+    	stu.setStu_id(stu_id);
+    }
+    con.close();  
+}catch(Exception ex){ex.printStackTrace();}  
+  
+
+	}
+
+
+public static void main(String[] args) throws SQLException {
+	BussinessLogic bl=new BussinessLogic();
+	 Connection con=DbConnection.jdbc();
+	  System.out.println(con);
+	
+	
+	
+}
+}

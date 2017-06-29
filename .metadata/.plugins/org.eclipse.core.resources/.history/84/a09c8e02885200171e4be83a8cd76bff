@@ -1,0 +1,10 @@
+package com.sample;
+
+public abstract class Cons {
+Cons(){
+	
+}
+}
+class abs extends Cons{
+	
+}

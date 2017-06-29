@@ -1,0 +1,12 @@
+package com.sample;
+
+public class inter {
+	
+	int count;
+	 static {
+		count = 100;
+	}
+	public static void main(String[] args) {
+		
+	}
+}

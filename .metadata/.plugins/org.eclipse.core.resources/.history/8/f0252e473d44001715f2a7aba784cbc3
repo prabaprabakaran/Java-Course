@@ -1,0 +1,15 @@
+package com.java8.MethodReference;
+
+public class TriFunOPer {
+	int a;
+	 String b;
+	 int c;
+public TriFunOPer(){
+	
+}
+public TriFunOPer(int a,String b,int c){
+	this.a=a;
+	this.b=b;
+	this.c=c;
+}
+}

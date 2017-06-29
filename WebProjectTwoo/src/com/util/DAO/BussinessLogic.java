@@ -1,0 +1,42 @@
+package com.util.DAO;
+
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.text.DateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+
+import com.util.bean.*;
+import com.util.connection.*;
+import com.util.connection.DbConnection;
+
+import sun.nio.cs.ext.Big5_HKSCS_2001;
+public class BussinessLogic {
+public List<userDetails> getList() throws SQLException{
+	List<userDetails>st=new ArrayList<userDetails>();
+	
+	Statement sta=DbConnection.jdbc().createStatement();
+
+
+	
+
+	if(sta!=null){
+		sta.close();
+	}
+	
+if(DbConnection.jdbc()!=null){
+	DbConnection.jdbc().close();
+}
+	
+	return st;
+	
+}
+public static void main(String[] args) throws SQLException {
+	BussinessLogic bl=new BussinessLogic();
+	System.out.println(bl.getList());
+	
+}
+}

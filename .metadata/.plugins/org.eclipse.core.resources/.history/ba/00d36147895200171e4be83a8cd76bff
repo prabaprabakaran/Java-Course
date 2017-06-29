@@ -1,0 +1,16 @@
+package com.sample;
+
+public abstract class Cons {
+Cons(){
+	System.out.println("hello");
+}
+Cons(int a,String b){
+	
+}
+public static void main(String[] args) {
+abs ab =new abs(1,"abc");	
+}
+}
+class abs extends Cons{
+	
+}

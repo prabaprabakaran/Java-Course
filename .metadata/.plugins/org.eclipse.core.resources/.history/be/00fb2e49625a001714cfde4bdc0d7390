@@ -1,0 +1,10 @@
+package geeksForGeeks;
+
+import java.util.Scanner;
+
+public class FactOperation {
+public static void main(String[] args) {
+	Scanner s=new Scanner(System.in);
+	
+}
+}

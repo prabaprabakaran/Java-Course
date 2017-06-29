@@ -1,0 +1,28 @@
+package com.sample;
+
+public class substr {
+public static void main(String[] args) {
+	/*String s="prabakaran";
+	String b=s.substring(4,6);
+	System.out.println(b);
+	StringBuffer a=new StringBuffer("mathi");
+	a.insert(5,12);
+	System.out.println(a);
+	String st="am";
+	String as=st.concat("praba");
+	System.out.println(as);*/
+	  /*StringBuilder str = new StringBuilder("studytonight");
+	  
+	  
+	  str.replace( 6, 13, "today");
+	  System.out.println(str);
+	  */
+	string s = "Hello";
+	string str = "Java";
+	string str2 = s.concat(str);
+	String str1 = "Hello".concat("Java");
+	 }
+	
+	 
+
+}

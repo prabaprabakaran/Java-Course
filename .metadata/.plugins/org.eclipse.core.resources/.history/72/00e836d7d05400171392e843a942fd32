@@ -1,0 +1,6 @@
+package com.util.EmpBean;
+
+public class EmpBean {
+int Employee_id;
+
+}

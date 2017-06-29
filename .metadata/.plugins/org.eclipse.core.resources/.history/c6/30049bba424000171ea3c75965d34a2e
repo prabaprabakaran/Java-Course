@@ -1,0 +1,26 @@
+package Day14;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+public class jdbcConnection {
+public void jdbc(){
+	Connection con=null;
+	Statement sta=null;
+	try {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","oracle");
+		sta=con.createStatement();
+		String str="create table student("ID INT,NAME VARCHAR(20),AGE INT");
+		
+	} catch (Exception e) {
+		
+		e.printStackTrace();
+	}
+	
+}
+public static void main(String[] args) {
+	
+}
+}

@@ -1,0 +1,14 @@
+package com.util.conn;
+
+
+public class DbConnection {
+	public static Connection jdbc() {
+		
+	}  
+		
+		
+		
+
+	public static void main(String[] args)  {
+			
+			}}

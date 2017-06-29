@@ -1,0 +1,13 @@
+package com.sample;
+
+public abstract class Cons {
+Cons(){
+	
+}
+public static void main(String[] args) {
+abs ab =new abs();	
+}
+}
+class abs extends Cons{
+	
+}

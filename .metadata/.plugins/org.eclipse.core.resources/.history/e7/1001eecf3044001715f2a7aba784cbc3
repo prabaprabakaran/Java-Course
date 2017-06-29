@@ -1,0 +1,10 @@
+package com.java8.MethodReference;
+
+public class ClassToStaticMethod {
+	public static void add(int a,int b){
+		retur a+b;
+	}
+public static void main(String[] args) {
+	
+}
+}

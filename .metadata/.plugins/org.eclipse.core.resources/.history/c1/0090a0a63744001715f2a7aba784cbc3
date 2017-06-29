@@ -1,0 +1,15 @@
+package com.java8.MethodReference;
+
+import java.util.function.BiFunction;
+
+public class ClassToInstanceMethod {
+	public ClassToInstanceMethod(){
+	BiFunction<Integer,Integer,Integer>bi=new ClassToInstanceMethod()::add;
+	}
+	public Integer add(Integer i,Integer a,Integer b){
+		return i=a+b;
+	}
+public static void main(String[] args) {
+	
+}
+}

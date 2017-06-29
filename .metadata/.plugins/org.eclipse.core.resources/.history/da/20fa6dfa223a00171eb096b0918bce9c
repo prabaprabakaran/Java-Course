@@ -1,0 +1,17 @@
+
+public class logicals {
+public static void main(String[] args) {
+	int c[]={};
+	int d[]={2,4};
+	logicals log=new logicals();
+	log.front11(c,d);
+}
+public int[] front11(int[] a, int[] b) {
+	
+			if(a.length>0 &&b.length>0){
+				System.out.println(a[0]+" "+b[0]);
+			}
+	return null;
+	  
+}
+}

@@ -1,0 +1,12 @@
+package geeksForGeeks;
+
+import java.util.Scanner;
+
+public class StringArrange {
+public static void main(String[] args) {
+Scanner s=new Scanner(System.in);
+String sb=s.nextLine();
+String str=sb.replaceAll("[^0-9+]","");
+System.out.println(str);
+}
+}

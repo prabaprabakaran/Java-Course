@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.sample.Cons&apos; to &apos;abs&apos;&#x0D;&#x0A;- Original project: &apos;Sample&apos;&#x0D;&#x0A;- Original element: &apos;com.sample.Cons&apos;&#x0D;&#x0A;- Renamed element: &apos;com.sample.abs&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Cons&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.sample{Cons.java[Cons" matchStrategy="1" name="abs" qualified="false" references="true" similarDeclarations="false" stamp="1497615185425" textual="false" version="1.0"/>
+</session>

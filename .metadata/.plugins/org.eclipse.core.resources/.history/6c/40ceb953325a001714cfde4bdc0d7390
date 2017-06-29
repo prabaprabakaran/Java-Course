@@ -1,0 +1,17 @@
+package geeksForGeeks;
+
+import java.util.Scanner;
+
+public class StringArrange {
+public static void main(String[] args) {
+Scanner s=new Scanner(System.in);
+String sb=s.nextLine();
+char ch[]=sb.replaceAll("[^0-9+]","").toCharArray();
+char ch[]=sb.replaceAll("[0-9+]","").toCharArray();
+int number=0;
+for(int i=0;i<ch.length;i++){
+	number+=ch[i]-48;
+}
+
+}
+}

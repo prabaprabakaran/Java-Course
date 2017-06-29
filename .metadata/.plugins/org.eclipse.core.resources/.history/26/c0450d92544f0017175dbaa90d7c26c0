@@ -1,0 +1,11 @@
+package com.sample;
+
+public class main {
+public static void main(String[] args) {
+	
+}
+public final int final(){
+	return 0;
+	
+}
+}

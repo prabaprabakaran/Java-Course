@@ -1,0 +1,12 @@
+package com.sample;
+
+public class gowtham {
+	public class abs extends abs{
+		abs(){
+
+		}
+		public static void main(String[] args) {
+			main("abc");
+		}
+		}
+}

@@ -1,0 +1,8 @@
+package com.java8.MethodReference;
+
+public class TriMain {
+public TriMain(){
+	System.out.println("empty cons");
+}
+
+}

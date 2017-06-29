@@ -1,0 +1,22 @@
+package Day14;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class preparedStatement {
+	public void prepared(){
+		Connection con=null;
+		preparedStatement ps=null;
+		try {
+			Class.forName("jdbc.oracle.driver.OracleDriver");
+            con=DriverManager.getConnection("jdbc:oracle:this:@localhost:1521:xe","mathi","mathi");
+		} catch (dException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+public static void main(String[] args) {
+	
+}
+}

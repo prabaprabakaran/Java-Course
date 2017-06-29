@@ -1,0 +1,18 @@
+package exercise;
+
+interface Inter {
+int a=19;
+
+}
+public abstract class B {
+
+	public static void main(String[] args) {
+		
+		
+	}
+}
+class C extends B{
+	public B{
+		
+	}
+}

@@ -1,0 +1,11 @@
+package com.sample;
+
+public class gowtham {
+	
+		public static void main(String[] args) {
+		main(1);
+		}
+		public static void main(int argsss){
+			System.out.println("daiiii");
+		}
+}

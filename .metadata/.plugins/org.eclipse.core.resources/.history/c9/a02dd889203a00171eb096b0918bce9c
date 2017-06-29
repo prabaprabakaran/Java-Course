@@ -1,0 +1,9 @@
+
+public class logicals {
+public static void main(String[] args) {
+	
+}
+public int[] front11(int[] a, int[] b) {
+	  
+}
+}

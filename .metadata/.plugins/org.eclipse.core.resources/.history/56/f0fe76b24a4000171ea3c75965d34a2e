@@ -1,0 +1,41 @@
+package Day14;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class jdbcConnection {
+public void jdbc(){
+	Connection con=null;
+	Statement sta=null;
+	try {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","system");
+		System.out.println(con);
+		sta=con.createStatement();
+		String str="CREATE TABLE STUDENT"+"(id INTEGER not NULL, "+" NAME VARCHAR(255),"+" age INTEGER,"+"PRIMARY KEY ( id ))"; 
+       sta.executeUpdate(str);
+		
+	} catch (Exception e) {
+		
+		e.printStackTrace();
+	}
+	finally{
+		
+			try {
+				if(con!=null){
+				con.close();
+				if(sta!=null){
+					sta.close();
+				}
+			} }
+			catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}}
+public static void main(String[] args) {
+	jdbcConnection jd=new jdbcConnection();
+	jd.jdbc();
+}
+}

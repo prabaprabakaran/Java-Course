@@ -1,0 +1,12 @@
+package geeksForGeeks;
+
+import java.util.Scanner;
+
+public class stringReplace {
+public static void main(String[] args) {
+	String str="Mr John Smith";
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	String str2=str.replace(" ","%20");
+}
+}

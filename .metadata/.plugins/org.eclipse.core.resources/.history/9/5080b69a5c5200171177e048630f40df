@@ -1,0 +1,14 @@
+package geeksForGeeks;
+
+import com.sample.mains;
+
+public class LeftRightShift {
+	enum color{
+		red,
+		blue,
+		gree;
+	}
+public static void main(String[] args) {
+	System.out.println(4>>10);
+}
+}

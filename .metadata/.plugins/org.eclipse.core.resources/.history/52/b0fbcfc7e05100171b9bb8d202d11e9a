@@ -1,0 +1,23 @@
+package geeksForGeeks;
+
+import java.util.Scanner;
+
+import com.sample.mains;
+
+public class stringSub {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	String str=sc.nextLine();
+	String strOne="";
+	for(int i=str.length();i>=0;i--)
+	{
+		for(int j=str.length();j>=0;j--){
+		strOne=str.substring(i);
+		System.out.println(strOne);	
+		}
+    
+	}	
+	
+
+}
+}

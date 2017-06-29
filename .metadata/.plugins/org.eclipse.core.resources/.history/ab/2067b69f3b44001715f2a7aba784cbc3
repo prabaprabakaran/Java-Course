@@ -1,0 +1,27 @@
+package com.java8.MethodReference;
+
+import java.util.function.BiFunction;
+
+public class ClassToInstanceMethod {
+	int salary;
+	
+	public int getSalary() {
+		return salary;
+	}
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	public ClassToInstanceMethod(){
+	BiFunction<ClassToInstanceMethod,Integer,ClassToInstanceMethod>bi=ClassToInstanceMethod::add;
+	
+	
+	}
+	public  ClassToInstanceMethod add(Integer i){
+		this.setSalary(i);
+		return this;
+	}
+	
+public static void main(String[] args) {
+	
+}
+}

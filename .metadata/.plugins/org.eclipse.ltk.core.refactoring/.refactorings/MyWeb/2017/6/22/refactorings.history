@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.servlet&apos; to &apos;Mac/src&apos;&#x0D;&#x0A;- Original project: &apos;MyWeb&apos;&#x0D;&#x0A;- Destination element: &apos;Mac/src&apos;&#x0D;&#x0A;- Original element: &apos;MyWeb/src/com.servlet&apos;" description="Copy package" destination="=Mac/src" element1="/src&lt;com.servlet" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1496470146609" version="1.0"/>
+</session>

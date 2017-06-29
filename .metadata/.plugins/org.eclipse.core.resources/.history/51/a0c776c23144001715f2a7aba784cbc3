@@ -1,0 +1,18 @@
+package com.java8.MethodReference;
+
+import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
+
+public class ClassToStaticMethod {
+	public static void add(int a,int b){
+		System.out.println(a+b);
+	}
+	public ClassToStaticMethod(){
+	BinaryOperator<Integer> bi=(Integer emp,Integer emp1)->emp+emp1;
+	Integer in=bi.apply(ClassToStaticMethod.add(1, 3));
+	System.out.println(in);
+	}
+public static void main(String[] args) {
+	ClassToStaticMethod cl=new ClassToStaticMethod();
+}
+}

@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class logicals {
+public static void main(String[] args) {
+	
+
+	 String reverse = "";
+	 Scanner scan = new Scanner(System.in);
+     String s = scan.nextLine();
+     String[] a=s.split("\\W");
+     String or="";
+   for(String c:a){
+	   or+=c;
+   }
+   System.out.println(or);
+     scan.close();
+}
+}

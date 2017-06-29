@@ -1,0 +1,25 @@
+import org.omg.Messaging.SyncScopeHelper;
+
+class aggre{
+	String name;
+	int id;
+	public aggre(String name,int id){
+		this.name=name;
+		this.id=id;
+	}
+	
+}
+class aggres{
+	
+	aggre s=new aggre("mathi",10);
+public void am(aggre s){
+	System.out.println(s);
+}
+	
+}
+public class example {
+public static void main(String[] args) {
+	aggres s1=new aggres();
+	
+}
+}

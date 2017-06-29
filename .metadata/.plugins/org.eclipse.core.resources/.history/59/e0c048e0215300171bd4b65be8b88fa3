@@ -1,0 +1,7 @@
+package com.sample;
+
+public static abstract class construct {
+static construct(){
+	
+}
+}

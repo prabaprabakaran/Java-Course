@@ -1,0 +1,5 @@
+package com.sample;
+
+public interface inter {
+    public abstract final void in();
+}
